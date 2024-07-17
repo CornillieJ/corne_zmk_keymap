@@ -37,7 +37,7 @@
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp F      &kp P               &kp G        &kp J            &kp L      &kp U            &kp Y    &kp DOUBLE_QUOTES  &kp DELETE
 &sk LALT   &kp A  &kp R  &kp S      &kp T               &kp D        &kp H            &kp N      &kp E            &kp I    &kp O              &kp SEMICOLON
-&sk LSHFT  &kp Z  &kp X  &kp C      &kp V               &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH           &sl 3
+&sk LSHFT  &kp Z  &kp X  &kp C      &kp V               &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH           &to 3
                          &sk LCTRL  &mt LEFT_GUI ENTER  &lt 1 TAB    &lt 2 BACKSPACE  &kp SPACE  &sk RIGHT_SHIFT
             >;
         };
@@ -62,10 +62,28 @@
 
         function_layer {
             bindings = <
-&none  &kp F1    &kp F2   &kp F3  &kp F4  &kp F5     &kp F6         &kp F7        &kp F8        &kp F9  &kp F10     &out OUT_TOG
-&none  &kp F11   &kp F12  &none   &none   &none      &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &none   &bt BT_CLR  &none
-&none  &kp CAPS  &none    &none   &none   &none      &bt BT_SEL 3   &bt BT_SEL 4  &none         &none   &none       &kp PRINTSCREEN
-                          &trans  &trans  &kp TAB    &kp BACKSPACE  &trans        &trans
+&tog 4  &kp F1    &kp F2   &kp F3  &kp F4  &kp F5     &kp F6         &kp F7        &kp F8        &kp F9  &kp F10     &out OUT_TOG
+&none   &kp F11   &kp F12  &none   &none   &none      &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &none   &bt BT_CLR  &none
+&none   &kp CAPS  &none    &none   &none   &none      &bt BT_SEL 3   &bt BT_SEL 4  &none         &none   &none       &kp PRINTSCREEN
+                           &trans  &trans  &kp TAB    &kp BACKSPACE  &trans        &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E      &kp R   &kp T    &kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
+&kp CAPS   &kp A  &kp S  &kp D      &kp F   &kp G    &trans   &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V   &kp B    &trans   &trans  &trans  &trans  &trans  &trans
+                         &kp LCTRL  &trans  &to 5    &kp ESC  &trans  &trans
+            >;
+        };
+
+        gaming_menu {
+            bindings = <
+&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &tog 0
+&kp GRAVE  &kp N6     &kp N7    &kp N8  &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LGUI   &kp LCTRL  &kp LALT  &kp K   &kp I   &kp J     &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &kp M   &trans    &trans  &trans  &trans
             >;
         };
     };
