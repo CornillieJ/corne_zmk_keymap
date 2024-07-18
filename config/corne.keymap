@@ -43,7 +43,11 @@
         euro: euro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kp N0 &kp N1 &kp N2 &kp N8 &kt LEFT_ALT>;
+            bindings = 
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp N0 &kp N1 &kp N2 &kp N8>
+                , <&macro_release &kp LALT>
+                ;
             label = "EURO";
             wait-ms = <15>;
         };
