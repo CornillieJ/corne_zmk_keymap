@@ -45,6 +45,7 @@
             #binding-cells = <0>;
             bindings = <&kt LEFT_ALT &kp N0 &kp N1 &kp N2 &kp N8 &kt LEFT_ALT>;
             label = "EURO";
+            wait-ms = <15>;
         };
     };
 
