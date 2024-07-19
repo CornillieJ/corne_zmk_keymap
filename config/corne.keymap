@@ -9,7 +9,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
@@ -43,11 +42,14 @@
         euro: euro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp N0 &kp N1 &kp N2 &kp N8>
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N2 &kp N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
             label = "EURO";
             wait-ms = <15>;
         };
@@ -58,9 +60,9 @@
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F      &kp P               &kp G        &kp J            &kp L      &kp U            &kp Y    &kp DOUBLE_QUOTES  &kp DELETE
-&sk LALT   &kp A  &kp R  &kp S      &kp T               &kp D        &kp H            &kp N      &kp E            &kp I    &kp O              &kp SEMICOLON
-&sk LSHFT  &kp Z  &kp X  &kp C      &kp V               &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH           &mo 3
+&kp TAB    &kp Q  &kp W  &kp F      &kp P               &kp G        &kp J            &kp L      &kp U            &kp Y    &kp SEMI  &kp DELETE
+&sk LALT   &kp A  &kp R  &kp S      &kp T               &kp D        &kp H            &kp N      &kp E            &kp I    &kp O     &kp ENTER
+&sk LSHFT  &kp Z  &kp X  &kp C      &kp V               &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
                          &sk LCTRL  &mt LEFT_GUI ENTER  &lt 1 TAB    &lt 2 BACKSPACE  &kp SPACE  &sk RIGHT_SHIFT
             >;
         };
