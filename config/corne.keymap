@@ -60,10 +60,10 @@
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F      &kp P               &kp G        &kp J            &kp L      &kp U            &kp Y    &kp SEMI  &kp DELETE
-&sk LALT   &kp A  &kp R  &kp S      &kp T               &kp D        &kp H            &kp N      &kp E            &kp I    &kp O     &kp ENTER
-&sk LSHFT  &kp Z  &kp X  &kp C      &kp V               &kp B        &kp K            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
-                         &sk LCTRL  &mt LEFT_GUI ENTER  &lt 1 TAB    &lt 2 BACKSPACE  &kp SPACE  &sk RIGHT_SHIFT
+&kp TAB    &kp Q  &kp W  &kp F    &kp P      &kp G    &kp J            &kp L      &kp U            &kp Y    &kp SEMI  &kp DELETE
+&sk LALT   &kp A  &kp R  &kp S    &kp T      &kp D    &kp H            &kp N      &kp E            &kp I    &kp O     &kp ENTER
+&sk LSHFT  &kp Z  &kp X  &kp C    &kp V      &kp B    &kp K            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
+                         &sk TAB  &kp SPACE  &mo 1    &lt 2 BACKSPACE  &kp SPACE  &sk RIGHT_SHIFT
             >;
         };
 
@@ -81,7 +81,7 @@
 &kp GRAVE  &kp CARET    &kp PIPE          &kp AMPERSAND      &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp CARET         &kp DOLLAR      &kp PERCENT  &kp G              &kp PAGE_DOWN    &none
 &kp EXCL   &kp DOLLAR   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp B             &kp LEFT        &kp DOWN     &kp UP             &kp RIGHT        &kp W
 &kp AT     &kp PERCENT  &kp POUND         &kp UNDERSCORE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none
-                                          &kp ESCAPE         &euro                 &kp TAB                  &trans            &trans          &trans
+                                          &kp ESCAPE         &kp LEFT_GUI          &kp TAB                  &trans            &trans          &trans
             >;
         };
 
