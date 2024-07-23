@@ -88,7 +88,7 @@
         function_layer {
             bindings = <
 &to 4  &kp F1    &kp F2   &kp F3  &kp F4  &kp F5     &kp F6         &kp F7        &kp F8        &kp F9  &kp F10     &out OUT_TOG
-&none  &kp F11   &kp F12  &none   &none   &none      &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &none   &bt BT_CLR  &none
+&to 6  &kp F11   &kp F12  &none   &none   &none      &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &none   &bt BT_CLR  &none
 &none  &kp CAPS  &none    &none   &none   &none      &bt BT_SEL 3   &bt BT_SEL 4  &none         &none   &none       &kp PRINTSCREEN
                           &trans  &trans  &kp TAB    &kp BACKSPACE  &trans        &trans
             >;
@@ -109,6 +109,24 @@
 &kp GRAVE  &kp N6     &kp N7    &kp N8  &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
 &kp LGUI   &kp LCTRL  &kp LALT  &kp K   &kp I   &kp J     &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &kp M   &trans    &trans  &trans  &trans
+            >;
+        };
+
+        right_hand_gaming {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp T     &kp R      &kp E        &kp W  &kp Q  &kp TAB
+&trans  &trans  &trans  &trans  &trans  &trans    &kp G     &kp F      &kp A        &kp S  &kp D  &kp LSHFT
+&trans  &trans  &trans  &trans  &trans  &trans    &kp B     &kp V      &kp C        &kp X  &kp Z  &kp LSHFT
+                        &trans  &trans  &trans    &kp LALT  &kp SPACE  &lt 7 LCTRL
+            >;
+        };
+
+        right_hand_gamingX {
+            bindings = <
+&to 0  &none  &none  &none  &none  &none    &kp ESC    &kp H         &kp N1  &kp N2  &kp N3  &kp I
+&none  &none  &none  &none  &none  &none    &kp K      &kp L         &kp N4  &kp N5  &kp N6  &kp ENTER
+&none  &none  &none  &none  &none  &none    &kp J      &kp M         &kp N7  &kp N8  &kp N9  &kp N0
+                     &none  &none  &none    &kp GRAVE  &kp LEFT_GUI  &none
             >;
         };
     };
