@@ -6,21 +6,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    // macros {
-    //     alt_tab: alt_tab {
-    //         compatible = "zmk,behavior-macro";
-    //         #binding-cells = <0>;
-    //         bindings = <&macro_press &kp LALT>, <&macro_tap &kp TABK>;
-    //     },
-    //     alt_release: alt_release{
-    //         compatible = "zmk,behavior-macro";
-    //         #binding-cells = <0>;
-    //         bindings 
-    //         = <1>
-    //         , <&macro_pause_for_release>
-    //         , <&macro_release &kp LALT>;
-    //     };
-    // };
 
     combos {
         compatible = "zmk,combos";
@@ -29,54 +14,63 @@
             bindings = <&kp ESCAPE>;
             key-positions = <20 21>;
             layers = <2>;
-        };
-
-        Show_layer_1 {
-            bindings = <&kp RA(RC(N1))>;
-            key-positions = <13 16>;
-            layers = <1>;
-        };
-
-        Show_layer_2 {
-            bindings = <&kp RC(RA(N2))>;
-            key-positions = <13 16>;
-            layers = <2>;
-        };
-
-        Show_layer_3 {
-            bindings = <&kp RC(RA(N3))>;
-            key-positions = <13 16>;
-            layers = <3>;
-        };
-
-        Show_layer_4 {
-            bindings = <&kp RA(RC(N4))>;
-            key-positions = <13 16>;
-            layers = <4>;
-        };
-
-        Show_layer_5 {
-            bindings = <&kp RC(RA(N5))>;
-            key-positions = <13 16>;
-            layers = <5>;
+            slow-release;
         };
 
         Show_layer_0 {
             bindings = <&kp RA(RC(N0))>;
             key-positions = <13 16>;
             layers = <0>;
+            slow-release;
+        };
+
+        Show_layer_1 {
+            bindings = <&kp RA(RC(N1))>;
+            key-positions = <13 16>;
+            layers = <1>;
+            slow-release;
+        };
+
+        Show_layer_2 {
+            bindings = <&kp RC(RA(N2))>;
+            key-positions = <13 16>;
+            layers = <2>;
+            slow-release;
+        };
+
+        Show_layer_3 {
+            bindings = <&kp RC(RA(N3))>;
+            key-positions = <13 16>;
+            layers = <3>;
+            slow-release;
+        };
+
+        Show_layer_4 {
+            bindings = <&kp RA(RC(N4))>;
+            key-positions = <13 16>;
+            layers = <4>;
+            slow-release;
+        };
+
+        Show_layer_5 {
+            bindings = <&kp RC(RA(N5))>;
+            key-positions = <13 16>;
+            layers = <5>;
+            slow-release;
         };
 
         Show_layer_6 {
             bindings = <&kp RA(RC(N6))>;
             key-positions = <19 22>;
             layers = <6>;
+            slow-release;
         };
 
         Show_layer_7 {
             bindings = <&kp RA(RC(N7))>;
             key-positions = <19 22>;
             layers = <7>;
+            slow-release;
         };
     };
 
