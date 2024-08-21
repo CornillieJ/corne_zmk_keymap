@@ -1,10 +1,3 @@
-/*
- * Copyright 2024 Michał Minarowski (@n3oney)
- * 
- * Originally created for QMK by Mark Stosberg (@markstos)
- * 
- * SPDX-License-Identifier: GPL-2.0-or-later
- */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -108,62 +101,6 @@
             #binding-cells = <0>;
             bindings = <&kp RC(FSLH)>;
             label = "NEXT_BACKGROUND";
-        };
-
-        show_layer_1: show_layer_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(N1))>;
-            label = "SHOW_LAYER_1";
-        };
-
-        Show_layer_2: Show_layer_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(N2))>;
-            label = "SHOW_LAYER_2";
-        };
-
-        Show_layer_3: Show_layer_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(N3))>;
-            label = "SHOW_LAYER_3";
-        };
-
-        Show_layer_4: Show_layer_4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(NUMBER_4))>;
-            label = "SHOW_LAYER_4";
-        };
-
-        Show_layer_5: Show_layer_5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(N5))>;
-            label = "SHOW_LAYER_5";
-        };
-
-        Show_layer_6: Show_layer_6 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(N6))>;
-            label = "SHOW_LAYER_6";
-        };
-
-        Show_layer_7: Show_layer_7 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(N7))>;
-            label = "SHOW_LAYER_7";
-        };
-
-        Show_layer_0: Show_layer_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(N0))>;
-            label = "SHOW_LAYER_0";
         };
     };
 
