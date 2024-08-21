@@ -37,6 +37,51 @@
             key-positions = <20 21>;
             layers = <2>;
         };
+
+        Show_layer_1 {
+            bindings = <&show_layer_1>;
+            key-positions = <13 16>;
+            layers = <1>;
+        };
+
+        Show_layer_2 {
+            bindings = <&Show_layer_2>;
+            key-positions = <13 16>;
+            layers = <2>;
+        };
+
+        Show_layer_3 {
+            bindings = <&Show_layer_3>;
+            key-positions = <13 16>;
+            layers = <3>;
+        };
+
+        Show_layer_4 {
+            bindings = <&Show_layer_4>;
+            key-positions = <13 16>;
+            layers = <4>;
+        };
+
+        Show_layer_5 {
+            bindings = <&Show_layer_5>;
+            key-positions = <13 16>;
+            layers = <5>;
+        };
+
+        Show_layer_0 {
+            bindings = <&Show_layer_0>;
+            key-positions = <13 16>;
+        };
+
+        Show_layer_6 {
+            bindings = <&Show_layer_6>;
+            key-positions = <19 22>;
+        };
+
+        Show_layer_7 {
+            bindings = <&Show_layer_7>;
+            key-positions = <19 22>;
+        };
     };
 
     macros {
@@ -60,6 +105,62 @@
             #binding-cells = <0>;
             bindings = <&kp RC(FSLH)>;
             label = "NEXT_BACKGROUND";
+        };
+
+        show_layer_1: show_layer_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(RA(N1))>;
+            label = "SHOW_LAYER_1";
+        };
+
+        Show_layer_2: Show_layer_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(RA(N2))>;
+            label = "SHOW_LAYER_2";
+        };
+
+        Show_layer_3: Show_layer_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(RA(N3))>;
+            label = "SHOW_LAYER_3";
+        };
+
+        Show_layer_4: Show_layer_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(RA(NUMBER_4))>;
+            label = "SHOW_LAYER_4";
+        };
+
+        Show_layer_5: Show_layer_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(RA(N5))>;
+            label = "SHOW_LAYER_5";
+        };
+
+        Show_layer_6: Show_layer_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(RA(N6))>;
+            label = "SHOW_LAYER_6";
+        };
+
+        Show_layer_7: Show_layer_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(RA(N7))>;
+            label = "SHOW_LAYER_7";
+        };
+
+        Show_layer_0: Show_layer_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(RA(N0))>;
+            label = "SHOW_LAYER_0";
         };
     };
 
@@ -95,10 +196,10 @@
 
         function_layer {
             bindings = <
-&to 4     &kp F1   &kp F2   &kp F3    &kp F4    &kp F5     &kp F6      &kp F7      &kp F8      &kp F9             &kp F10           &out OUT_TOG
-&to 6     &kp F11  &kp F12  &none     &none     &bootloader &bootloader &none       &none       &none              &none             &none
-&kp CAPS  &none    &none    &none     &none     &to 0      &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &kp LS(LA(SLASH))  &next_background  &none
-                            &mkp MB4  &mkp MB5  &kp TAB    &to 3       &mkp MB1    &mkp MB2
+&to 4     &kp F1   &kp F2   &kp F3    &kp F4    &kp F5         &kp F6       &kp F7      &kp F8      &kp F9             &kp F10           &out OUT_TOG
+&to 6     &kp F11  &kp F12  &none     &none     &bootloader    &bootloader  &none       &none       &none              &none             &none
+&kp CAPS  &none    &none    &none     &none     &to 0          &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &kp LS(LA(SLASH))  &next_background  &none
+                            &mkp MB4  &mkp MB5  &kp TAB        &to 3        &mkp MB1    &mkp MB2
             >;
         };
 
