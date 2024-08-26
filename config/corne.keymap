@@ -55,14 +55,6 @@
             slow-release;
         };
 
-        Show_layer_5 {
-            timeout-ms = <100>;
-            bindings = <&kp RC(RA(N5))>;
-            key-positions = <13 16>;
-            layers = <5>;
-            slow-release;
-        };
-
         Show_layer_6 {
             timeout-ms = <100>;
             bindings = <&kp RA(RC(N6))>;
@@ -77,6 +69,14 @@
             key-positions = <19 22>;
             layers = <7>;
             slow-release;
+        };
+
+        Show_layer_5 {
+            bindings = <&kp RA(RC(N5))>;
+            key-positions = <13 16>;
+            timeout-ms = <100>;
+            slow-release;
+            layers = <4>;
         };
     };
 
