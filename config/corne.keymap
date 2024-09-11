@@ -7,6 +7,17 @@
     chain-length = <27>;
 };
 / {
+    underglow {
+        compatible = "zmk,rgb-underglow";
+        label = "RGB Underglow";
+        // Define total LED count
+        chain-length = <27>;
+        // Define the split for different effects
+        segments = <6>, <21>;
+        // Colors for each segment
+        segment-colors = <0xFF0000>,  // Red for the first 6 LEDs (underneath)
+                         <0x00FF00>;  // Green for the next 21 LEDs (on top)
+    };
     combos {
         compatible = "zmk,combos";
 
