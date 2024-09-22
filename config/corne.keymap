@@ -42,7 +42,7 @@
         };
 
         Show_layer_0 {
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             bindings = <&kp RA(RC(N0))>;
             key-positions = <13 16>;
             layers = <0>;
@@ -50,7 +50,7 @@
         };
 
         Show_layer_1 {
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             bindings = <&kp RA(RC(N1))>;
             key-positions = <13 16>;
             layers = <1>;
@@ -58,7 +58,7 @@
         };
 
         Show_layer_2 {
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             bindings = <&kp RC(RA(N2))>;
             key-positions = <13 16>;
             layers = <2>;
@@ -66,7 +66,7 @@
         };
 
         Show_layer_3 {
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             bindings = <&kp RC(RA(N3))>;
             key-positions = <13 16>;
             layers = <3>;
@@ -74,7 +74,7 @@
         };
 
         Show_layer_4 {
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             bindings = <&kp RA(RC(N4))>;
             key-positions = <13 16>;
             layers = <4>;
@@ -82,7 +82,7 @@
         };
 
         Show_layer_6 {
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             bindings = <&kp RA(RC(N6))>;
             key-positions = <19 22>;
             layers = <6>;
@@ -90,7 +90,7 @@
         };
 
         Show_layer_7 {
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             bindings = <&kp RA(RC(N7))>;
             key-positions = <19 22>;
             layers = <7>;
@@ -100,7 +100,7 @@
         Show_layer_5 {
             bindings = <&kp RA(RC(N5))>;
             key-positions = <13 16>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             slow-release;
             layers = <4>;
         };
