@@ -25,7 +25,7 @@
 
         segment-colors =
             <0xFF0000>,
-            // Red for the first 6 LEDs (underneath),,,,,,
+            // Red for the first 6 LEDs (underneath),,,,,,,
             <0x00FF00>;
 
         // Green for the next 21 LEDs (on top)
@@ -34,15 +34,8 @@
     combos {
         compatible = "zmk,combos";
 
-        jk_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <20 21>;
-            layers = <2>;
-            slow-release;
-        };
-
         Show_layer_0 {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             bindings = <&kp RA(RC(N0))>;
             key-positions = <13 16>;
             layers = <0>;
@@ -143,6 +136,13 @@
             bindings = <&kp J &kp E &kp F &kp F &kp R &kp E &kp Y &kp DOT &kp C &kp O &kp R &kp N &kp I &kp L &kp L &kp I &kp E &kp AT &kp H &kp O &kp T &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "EMAIL";
         };
+
+        name: name {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(J) &kp E &kp F &kp F &kp R &kp E &kp Y &kp SPACE &kp LS(C) &kp O &kp R &kp N &kp I &kp L &kp L &kp I &kp E>;
+            label = "NAME";
+        };
     };
 
     keymap {
@@ -171,7 +171,7 @@
 &kp GRAVE  &kp CARET    &kp PIPE          &kp AMPERSAND      &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp CARET  &kp DOLLAR      &kp PERCENT    &kp G        &kp PAGE_DOWN  &kp TILDE
 &kp EXCL   &kp DOLLAR   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp B      &kp LEFT        &kp DOWN       &kp UP       &kp RIGHT      &kp W
 &kp AT     &kp PERCENT  &kp POUND         &kp UNDERSCORE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &euro      &kp C_PREVIOUS  &kp PAGE_DOWN  &kp PAGE_UP  &kp C_NEXT     &kp K_CONTEXT_MENU
-                                          &kp ESCAPE         &kp LEFT_GUI          &caps_word               &trans     &trans          &email
+                                          &kp ESCAPE         &kp LEFT_GUI          &caps_word               &trans     &name           &email
             >;
         };
 
