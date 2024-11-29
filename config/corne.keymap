@@ -25,7 +25,7 @@
 
         segment-colors =
             <0xFF0000>,
-            // Red for the first 6 LEDs (underneath),,,,,,,
+            // Red for the first 6 LEDs (underneath),,,,,,,,
             <0x00FF00>;
 
         // Green for the next 21 LEDs (on top)
@@ -150,10 +150,10 @@
 
         default_layer {
             bindings = <
-&kp LC(LS(ESCAPE))  &kp Q  &kp W  &kp F    &kp P           &kp G    &kp J            &kp L      &kp U            &kp Y    &kp SEMI  &kp DELETE
-&kp LALT            &kp A  &kp R  &kp S    &kp T           &kp D    &kp H            &kp N      &kp E            &kp I    &kp O     &kp ENTER
-&kp LCTRL           &kp Z  &kp X  &kp C    &kp V           &kp B    &kp K            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
-                                  &kp TAB  &kp LEFT_SHIFT  &mo 1    &lt 2 BACKSPACE  &kp SPACE  &sk RIGHT_SHIFT
+&kp TAB    &kp Q  &kp W  &kp F    &kp P           &kp G    &kp J            &kp L      &kp U            &kp Y    &kp SEMI  &kp DELETE
+&kp LALT   &kp A  &kp R  &kp S    &kp T           &kp D    &kp H            &kp N      &kp E            &kp I    &kp O     &kp ENTER
+&kp LCTRL  &kp Z  &kp X  &kp C    &kp V           &kp B    &kp K            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
+                         &kp TAB  &kp LEFT_SHIFT  &mo 1    &lt 2 BACKSPACE  &kp SPACE  &sk RIGHT_SHIFT
             >;
         };
 
@@ -177,9 +177,9 @@
 
         function_layer {
             bindings = <
-&to 4     &kp F1   &kp F2   &kp F3    &kp F4     &kp F5         &kp F6       &kp F7      &kp F8      &kp F9             &kp F10   &out OUT_TOG
-&to 6     &kp F11  &kp F12  &none     &soft_off  &bootloader    &bootloader  &soft_off   &sys_reset  &none              &none     &none
-&kp CAPS  &email   &none    &none     &none      &to 0          &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &kp LS(LA(SLASH))  &next_BG  &none
+&to 4     &kp F1   &kp F2   &kp F3    &kp F4     &kp F5         &kp F6       &kp F7      &kp F8      &kp F9             &kp F10             &out OUT_TOG
+&to 6     &kp F11  &kp F12  &none     &soft_off  &bootloader    &bootloader  &soft_off   &sys_reset  &none              &none               &none
+&kp CAPS  &email   &none    &none     &none      &to 0          &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &kp LS(LA(SLASH))  &kp LC(LS(ESCAPE))  &none
                             &mkp MB4  &mkp MB5   &kp TAB        &to 3        &mkp MB1    &mkp MB2
             >;
         };
