@@ -1,9 +1,10 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 &led_strip { chain-length = <27>; };
@@ -25,7 +26,7 @@
 
         segment-colors =
             <0xFF0000>,
-            // Red for the first 6 LEDs (underneath),,,,,,,,
+            // Red for the first 6 LEDs (underneath),,,,,,,,,
             <0x00FF00>;
 
         // Green for the next 21 LEDs (on top)
@@ -143,6 +144,13 @@
             bindings = <&none &kp J &kp E &kp F &kp F &kp R &kp E &kp Y &kp SPACE &kp C &kp O &kp R &kp N &kp I &kp L &kp L &kp I &kp E>;
             label = "NAME";
         };
+
+        ysiw_surround: ysiw_surround {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp Y &kp S &kp I &kp W>;
+            label = "YSIW_SURROUND";
+        };
     };
 
     keymap {
@@ -153,7 +161,7 @@
 &kp TAB    &kp Q  &kp W  &kp F    &kp P           &kp G    &kp J            &kp L      &kp U            &kp Y    &kp SEMI  &kp DELETE
 &kp LALT   &kp A  &kp R  &kp S    &kp T           &kp D    &kp H            &kp N      &kp E            &kp I    &kp O     &kp ENTER
 &kp LCTRL  &kp Z  &kp X  &kp C    &kp V           &kp B    &kp K            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
-                         &kp TAB  &kp LEFT_SHIFT  &mo 1    &lt 2 BACKSPACE  &kp SPACE  &sk RIGHT_SHIFT
+                         &kp TAB  &kp LEFT_SHIFT  &mo 1    &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_SHIFT
             >;
         };
 
@@ -168,17 +176,17 @@
 
         Nav_Symbols {
             bindings = <
-&kp GRAVE  &kp CARET    &kp PIPE          &kp AMPERSAND      &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp CARET  &kp DOLLAR      &kp PERCENT    &kp G        &kp PAGE_DOWN  &kp TILDE
-&kp EXCL   &kp DOLLAR   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp B      &kp LEFT        &kp DOWN       &kp UP       &kp RIGHT      &kp W
-&kp AT     &kp PERCENT  &kp POUND         &kp UNDERSCORE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &euro      &kp C_PREVIOUS  &kp PAGE_DOWN  &kp PAGE_UP  &kp C_NEXT     &kp K_CONTEXT_MENU
-                                          &kp ESCAPE         &kp LEFT_GUI          &caps_word               &trans     &name           &email
+&kp GRAVE  &kp CARET    &kp PIPE          &kp AMPERSAND      &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp CARET  &kp DOLLAR  &kp PERCENT  &kp G    &ysiw_surround  &kp TILDE
+&kp EXCL   &kp DOLLAR   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp B      &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT       &kp W
+&kp AT     &kp PERCENT  &kp POUND         &kp UNDERSCORE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &euro      &kp F14     &kp F15      &kp F16  &kp F17         &kp K_CONTEXT_MENU
+                                          &kp ESCAPE         &kp LEFT_GUI          &caps_word               &trans     &name       &email
             >;
         };
 
         function_layer {
             bindings = <
 &to 4     &kp F1   &kp F2   &kp F3    &kp F4     &kp F5         &kp F6       &kp F7      &kp F8      &kp F9             &kp F10             &out OUT_TOG
-&to 6     &kp F11  &kp F12  &none     &soft_off  &bootloader    &bootloader  &soft_off   &sys_reset  &none              &none               &none
+&to 6     &kp F11  &kp F12  &kp F13   &soft_off  &bootloader    &bootloader  &soft_off   &sys_reset  &none              &none               &none
 &kp CAPS  &email   &none    &none     &none      &to 0          &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &kp LS(LA(SLASH))  &kp LC(LS(ESCAPE))  &none
                             &mkp MB4  &mkp MB5   &kp TAB        &to 3        &mkp MB1    &mkp MB2
             >;
