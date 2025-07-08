@@ -25,7 +25,7 @@
 
         segment-colors =
             <0xFF0000>,
-            // Red for the first 6 LEDs (underneath),,,,,,,,,,
+            // Red for the first 6 LEDs (underneath),,,,,,,,,,,
             <0x00FF00>;
 
         // Green for the next 21 LEDs (on top)
@@ -157,19 +157,19 @@
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F    &kp P           &kp G    &kp J            &kp L      &kp U            &kp Y    &kp SEMI  &kp DELETE
-&kp LALT   &kp A  &kp R  &kp S    &kp T           &kp D    &kp H            &kp N      &kp E            &kp I    &kp O     &kp ENTER
-&kp LCTRL  &kp Z  &kp X  &kp C    &kp V           &kp B    &kp K            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &mo 3
-                         &kp TAB  &kp LEFT_SHIFT  &mo 1    &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_SHIFT
+&kp TAB         &kp Q  &kp W  &kp F          &kp P           &kp G    &kp J            &kp L      &kp U      &kp Y    &kp SEMI  &kp DELETE
+&kp LALT        &kp A  &kp R  &kp S          &kp T           &kp D    &kp H            &kp N      &kp E      &kp I    &kp O     &kp ENTER
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C          &kp V           &kp B    &kp K            &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mo 3
+                              &kp LEFT_META  &kp LEFT_SHIFT  &mo 1    &lt 2 BACKSPACE  &kp SPACE  &kp LCTRL
             >;
         };
 
         Numbers_Media {
             bindings = <
-&none             &none  &kp PAGE_DOWN  &kp C_REWIND      &kp C_FAST_FORWARD  &kp C_VOLUME_UP      &kp PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK   &kp BACKSPACE
-&none             &none  &kp END        &kp K_PLAY_PAUSE  &kp C_PLAY_PAUSE    &kp C_VOLUME_DOWN    &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH      &kp NON_US_BACKSLASH
-&ext_power EP_ON  &none  &kp HOME       &kp C_PREVIOUS    &kp C_NEXT          &kp C_MUTE           &kp MINUS  &kp N1        &kp N2        &kp N3        &kp LESS_THAN  &kp GREATER_THAN
-                                        &trans            &trans              &trans               &kp COMMA  &kp DOT       &kp NUMBER_0
+&none             &none            &kp PAGE_DOWN  &kp C_REWIND      &kp C_FAST_FORWARD  &kp C_VOLUME_UP      &kp PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK   &kp BACKSPACE
+&none             &kp PRINTSCREEN  &kp END        &kp K_PLAY_PAUSE  &kp C_PLAY_PAUSE    &kp C_VOLUME_DOWN    &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH      &kp NON_US_BACKSLASH
+&ext_power EP_ON  &none            &kp K_CUT      &kp K_COPY        &kp K_PASTE         &kp C_MUTE           &kp MINUS  &kp N1        &kp N2        &kp N3        &kp LESS_THAN  &kp GREATER_THAN
+                                                  &trans            &trans              &trans               &kp COMMA  &kp DOT       &kp NUMBER_0
             >;
         };
 
