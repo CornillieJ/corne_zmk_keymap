@@ -25,7 +25,7 @@
 
         segment-colors =
             <0xFF0000>,
-            // Red for the first 6 LEDs (underneath),,,,,,,,,,,,,,
+            // Red for the first 6 LEDs (underneath),,,,,,,,,,,,,,,
             <0x00FF00>;
 
         // Green for the next 21 LEDs (on top)
@@ -186,7 +186,7 @@
             bindings = <
 &to 4     &kp F1   &kp F2   &kp F3    &kp F4     &kp F5         &kp F6       &kp F7      &kp F8      &kp F9             &kp F10             &out OUT_TOG
 &to 6     &kp F11  &kp F12  &kp F13   &soft_off  &bootloader    &bootloader  &soft_off   &sys_reset  &none              &none               &none
-&kp CAPS  &email   &none    &none     &to 8      &to 0          &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &kp LS(LA(SLASH))  &kp LC(LS(ESCAPE))  &none
+&kp CAPS  &email   &none    &none     &tog 8     &to 0          &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &kp LS(LA(SLASH))  &kp LC(LS(ESCAPE))  &none
                             &mkp MB4  &mkp MB5   &kp TAB        &tog 3       &mkp MB1    &mkp MB2
             >;
         };
