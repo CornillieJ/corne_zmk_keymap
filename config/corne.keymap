@@ -25,77 +25,13 @@
 
         segment-colors =
             <0xFF0000>,
-            // Red for the first 6 LEDs (underneath),,,,,,,,,,,,,,,,,,,
+            // Red for the first 6 LEDs (underneath),,,,,,,,,,,,,,,,,,,,
             <0x00FF00>;
 
         // Green for the next 21 LEDs (on top)
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        Show_layer_0 {
-            timeout-ms = <20>;
-            bindings = <&kp RA(RC(N0))>;
-            key-positions = <13 16>;
-            layers = <1>;
-            slow-release;
-        };
-
-        Show_layer_1 {
-            timeout-ms = <50>;
-            bindings = <&kp RA(RC(N1))>;
-            key-positions = <13 16>;
-            layers = <2>;
-            slow-release;
-        };
-
-        Show_layer_2 {
-            timeout-ms = <50>;
-            bindings = <&kp RC(RA(N2))>;
-            key-positions = <13 16>;
-            layers = <3>;
-            slow-release;
-        };
-
-        Show_layer_3 {
-            timeout-ms = <50>;
-            bindings = <&kp RC(RA(N3))>;
-            key-positions = <13 16>;
-            layers = <4>;
-            slow-release;
-        };
-
-        Show_layer_4 {
-            timeout-ms = <50>;
-            bindings = <&kp RA(RC(N4))>;
-            key-positions = <13 16>;
-            layers = <5>;
-            slow-release;
-        };
-
-        Show_layer_6 {
-            timeout-ms = <50>;
-            bindings = <&kp RA(RC(N6))>;
-            key-positions = <19 22>;
-            slow-release;
-        };
-
-        Show_layer_7 {
-            timeout-ms = <50>;
-            bindings = <&kp RA(RC(N7))>;
-            key-positions = <19 22>;
-            slow-release;
-        };
-
-        Show_layer_5 {
-            bindings = <&kp RA(RC(N5))>;
-            key-positions = <13 16>;
-            timeout-ms = <50>;
-            slow-release;
-            layers = <5>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         euro: euro {
