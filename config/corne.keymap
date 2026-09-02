@@ -26,7 +26,7 @@
 
         segment-colors =
             <0xFF0000>,
-            // Red for the first 6 LEDs (underneath),,,,,,,,,,,,,
+            // Red for the first 6 LEDs (underneath),,,,,,,,,,,,,,
             <0x00FF00>;
 
         // Green for the next 21 LEDs (on top)
@@ -79,7 +79,6 @@
             timeout-ms = <100>;
             bindings = <&kp RA(RC(N6))>;
             key-positions = <19 22>;
-            layers = <7>;
             slow-release;
         };
 
@@ -87,7 +86,6 @@
             timeout-ms = <100>;
             bindings = <&kp RA(RC(N7))>;
             key-positions = <19 22>;
-            layers = <8>;
             slow-release;
         };
 
@@ -116,17 +114,10 @@
             wait-ms = <15>;
         };
 
-        next_BG: next_BG {
+        vm_switch: next_BG {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_CONTROL>,
-                <&macro_tap>,
-                <&kp FSLH>,
-                <&macro_release>,
-                <&kp RIGHT_CONTROL>;
-
+            bindings = <&kp LC(LG(LA(ENTER)))>;
             label = "NEXT_BG";
             wait-ms = <15>;
         };
@@ -194,10 +185,10 @@
 
         function_layer {
             bindings = <
-&to 5     &kp F1   &kp F2   &kp F3    &kp F4     &kp F5         &kp F6       &kp F7      &kp F8      &kp F9             &kp F10             &out OUT_TOG
-&to 7     &kp F11  &kp F12  &kp F13   &soft_off  &bootloader    &bootloader  &soft_off   &sys_reset  &none              &none               &none
-&kp CAPS  &email   &none    &none     &to 0      &to 1          &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &kp LS(LA(SLASH))  &kp LC(LS(ESCAPE))  &none
-                            &mkp MB4  &mkp MB5   &kp TAB        &to 4        &mkp MB1    &mkp MB2
+&to 5       &kp F1   &kp F2   &kp F3    &kp F4     &kp F5         &kp F6       &kp F7      &kp F8      &kp F9             &kp F10             &out OUT_TOG
+&vm_switch  &kp F11  &kp F12  &kp F13   &soft_off  &bootloader    &bootloader  &soft_off   &sys_reset  &none              &none               &none
+&kp CAPS    &email   &none    &none     &to 0      &to 1          &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &kp LS(LA(SLASH))  &kp LC(LS(ESCAPE))  &none
+                              &mkp MB4  &mkp MB5   &kp TAB        &to 4        &mkp MB1    &mkp MB2
             >;
         };
 
@@ -216,24 +207,6 @@
 &kp GRAVE  &kp N6     &kp N7    &kp N8            &kp N9        &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
 &kp M      &kp LCTRL  &kp LALT  &kp K             &kp I         &kp J     &trans  &trans  &trans  &trans  &trans  &trans
                                 &kp C_PLAY_PAUSE  &kp LEFT_GUI  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        right_hand_gaming {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp T     &kp R      &kp E        &kp W  &kp Q  &kp TAB
-&trans  &trans  &trans  &trans  &trans  &trans    &kp G     &kp F      &kp A        &kp S  &kp D  &kp LSHFT
-&trans  &trans  &trans  &trans  &trans  &trans    &kp B     &kp V      &kp C        &kp X  &kp Z  &kp LSHFT
-                        &trans  &trans  &trans    &kp LALT  &kp SPACE  &lt 8 LCTRL
-            >;
-        };
-
-        right_hand_gamingX {
-            bindings = <
-&to 0  &none  &none  &none  &none  &none    &kp ESC    &kp H         &kp N1  &kp N2  &kp N3  &kp I
-&none  &none  &none  &none  &none  &none    &kp K      &kp L         &kp N4  &kp N5  &kp N6  &kp ENTER
-&none  &none  &none  &none  &none  &none    &kp J      &kp M         &kp N7  &kp N8  &kp N9  &kp N0
-                     &none  &none  &none    &kp GRAVE  &kp LEFT_GUI  &none
             >;
         };
     };
