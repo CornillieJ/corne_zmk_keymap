@@ -38,7 +38,7 @@ include:
   - board: nrf52840_mdk_usb_dongle
     shield: corne_dongle
     snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
+    cmake-args: -DCONFIG_LOG_MODE_IMMEDIATE=y
     artifact-name: corne_dongle_debug_logging
   # Flash these on all three controllers first to clear old pairing/bond data
   # before flashing the firmware above.
