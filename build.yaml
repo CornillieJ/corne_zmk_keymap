@@ -37,6 +37,16 @@ include:
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     snippet: zmk-usb-logging
     artifact-name: corne_left_debug_logging
+  # Temporary debug build of the dongle with logging enabled and USB HID
+  # output disabled (HID + CDC-ACM together broke this board's USB
+  # descriptor; CDC-ACM alone should enumerate cleanly). Central-side
+  # BLE/GATT logic doesn't depend on ZMK_USB, so this can still show why
+  # the dongle drops peripheral connections.
+  - board: nrf52840_mdk_usb_dongle
+    shield: corne_dongle
+    snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_ZMK_USB=n
+    artifact-name: corne_dongle_debug_logging
   # Flash these on all three controllers first to clear old pairing/bond data
   # before flashing the firmware above.
   - board: nrf52840_mdk_usb_dongle
