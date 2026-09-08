@@ -18,7 +18,19 @@
 #
 ---
 include:
+  # Dongle acts as the BLE central and USB host device.
+  - board: nrf52840_mdk_usb_dongle
+    shield: corne_dongle
+  # Both halves are now peripherals; the dongle is central.
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+  # Flash these on all three controllers first to clear old pairing/bond data
+  # before flashing the firmware above.
+  - board: nrf52840_mdk_usb_dongle
+    shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset
