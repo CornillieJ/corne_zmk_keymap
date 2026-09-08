@@ -12,6 +12,16 @@ config ZMK_SPLIT
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
 
+# nrf52840_mdk_usb_dongle has no ZMK-native board defconfig (unlike
+# nice_nano, which sets these itself), and neither ZMK_BLE nor ZMK_USB
+# auto-enables on its own - without this, CONFIG_BT never gets selected
+# at all, so the central never scans for peripherals.
+config ZMK_BLE
+    default y
+
+config ZMK_USB
+    default y
+
 config BT_MAX_CONN
     default 7
 
