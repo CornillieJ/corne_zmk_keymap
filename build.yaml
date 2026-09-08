@@ -19,10 +19,8 @@
 ---
 include:
   # Dongle acts as the BLE central and USB host device.
-  # snippet adds USB serial logging (temporary, for debugging connections).
   - board: nrf52840_mdk_usb_dongle
     shield: corne_dongle
-    snippet: zmk-usb-logging
   # Both halves are now peripherals; the dongle is central.
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
@@ -30,6 +28,15 @@ include:
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+  # Temporary debug build: same as corne_left above but with USB serial
+  # logging enabled, to diagnose the peripheral BLE connection issue.
+  # nice_nano_v2 handles the logging snippet cleanly (unlike the dongle
+  # board, which produced a broken USB composite descriptor with it).
+  - board: nice_nano_v2
+    shield: corne_left nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    snippet: zmk-usb-logging
+    artifact-name: corne_left_debug_logging
   # Flash these on all three controllers first to clear old pairing/bond data
   # before flashing the firmware above.
   - board: nrf52840_mdk_usb_dongle
