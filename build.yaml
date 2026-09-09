@@ -19,8 +19,13 @@
 ---
 include:
   # Dongle acts as the BLE central and USB host device.
+  # snippet: zmk-usb-logging enables a live log over the dongle's USB CDC-ACM
+  # port (sudo cat /dev/ttyACM*) - temporary, for debugging "connected but no
+  # keys register"; remove once resolved.
   - board: nrf52840_mdk_usb_dongle
     shield: corne_dongle
+    snippet: zmk-usb-logging
+    artifact-name: corne_dongle_with_logging
   # Both halves are now peripherals; the dongle is central.
   - board: nice_nano//zmk
     shield: corne_right
