@@ -24,3 +24,6 @@ include:
   - board: nice_nano//zmk
     shield: corne_left nice_view_adapter nice_view
     artifact-name: corne_left
+  - board: nice_nano//zmk
+    shield: settings_reset
+    artifact-name: settings_reset
