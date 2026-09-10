@@ -28,4 +28,20 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 7
 
+# Zephyr's software link-layer (BT_LL_SW_SPLIT, used here since this board
+# has no Nordic SoftDevice) defaults BT_CTLR_RX_BUFFERS to just 1. With two
+# peripherals reconnecting to this central at nearly the same instant - the
+# normal case right after this dongle cold-boots, e.g. after the host PC was
+# powered off overnight, versus day-to-day operation where reconnects are
+# rarely simultaneous - a single shared RX buffer is a plausible bottleneck
+# for the concurrent GATT discovery both peripherals trigger at once. This
+# mirrors the same class of bug fixed upstream for BT_ATT_TX_COUNT in
+# https://github.com/zmkfirmware/zmk/pull/3216 (zmkfirmware/zmk#3156):
+# GATT discovery for one peripheral's position-state characteristic can
+# silently abort mid-discovery when a concurrent operation for the other
+# peripheral exhausts a shared resource, leaving that peripheral showing
+# "connected" while never actually registering key events.
+config BT_CTLR_RX_BUFFERS
+    default 8
+
 endif
